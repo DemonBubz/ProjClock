@@ -1,17 +1,28 @@
 let x1, x2, selectedZoneC1 = defaultZone, selectedZoneC2 = defaultZone;
+var firstCardRunning=false;
 function dropDown1Interface() {
+    var existingElem=document.querySelector('#zeroCunt');
+    var cardElem=existingElem.cloneNode(true);
+    cardElem.class='container';
+    cardElem.id='firstCunt';
+    cardElem.style.width="26vw";
+    cardElem.style.display="inline-block";
+    cardElem.style.position="relative";
+    cardElem.style.fontSize="26px";
+    cardElem.style.right="2px";
+    
     select[0].addEventListener("click", x => {
+       existingElem.after(cardElem);
+       firstCardRunning=true;
+       clearInterval(x2);
+       selectedZoneC1 = select[0].options[select[0].selectedIndex].value;
         if (clock12Running) {
-            clearInterval(x1);
             clock12Running = false;
-            selectedZoneC1 = select[0].options[select[0].selectedIndex].value;
             console.log("selected", selectedZoneC1);
-            x1 = setInterval(function () { showClock12(selectedZoneC1, "firstCunt") }, 1000);
+            x2 = setInterval(function () { showClock12(selectedZoneC1,'firstCunt') }, 1000);
             console.log("clock12Running");
         } else if (clock24Running) {
-            clearInterval(x2);
             clock24Running = false;
-            selectedZoneC1 = select[0].options[select[0].selectedIndex].value;
             x2 = setInterval(function () { showClock24(selectedZoneC1, "firstCunt") }, 1000);
         }
     })
@@ -20,12 +31,17 @@ function dropDown1Interface() {
 var secondCardRunning = false, x3;
 function dropDown2Interface() {
     timeZoneMenu(importedTimeZoneList);
-
-    // var secondDropDown=document.querySelector("#div3");
     var existingElem = document.querySelector('.container');
     var cardElem = existingElem.cloneNode(true);
     cardElem.class = 'container';
     cardElem.id = 'secondCunt';
+    cardElem.style.width="26vw";
+    cardElem.style.display="inline-block";
+    cardElem.style.fontSize="26px";
+    cardElem.style.position="realtive";
+    cardElem.style.right="2px";
+    
+    // cardElem.style.float="right";
     select[1].addEventListener("click", function () {
         existingElem.after(cardElem);
         // console.log("12",clock12Running,"24",clock24Running);
