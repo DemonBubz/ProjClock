@@ -1,4 +1,4 @@
-let x1,x2,selectedZoneC1=defaultZone,selectedZoneC2=defaultZone;
+let x1, x2, selectedZoneC1 = defaultZone, selectedZoneC2 = defaultZone;
 function dropDown1Interface() {
     select[0].addEventListener("click", x => {
         if (clock12Running) {
@@ -28,38 +28,22 @@ function dropDown2Interface() {
     cardElem.id = 'secondCunt';
     select[1].addEventListener("click", function () {
         existingElem.after(cardElem);
-        if (!secondCardRunning) {
-            // console.log("12",clock12Running,"24",clock24Running);
-            secondCardRunning = true;
-            if (clock12Running) {
-                console.log('12 is running');
-                x3 = setInterval(function () { showClock12(selectedZoneC2, 'secondCunt') }, 1000);
-            }
-            if (clock24Running){
-                console.log("24 is running");
-                x3 = setInterval(function () { showClock24(selectedZoneC2, 'secondCunt') }, 1000)
-                
-            }
-            } else
-            if (secondCardRunning) {
-                console.log("second card is running")
-                clearInterval(x3);
-                selectedZoneC2 = select[1].options[select[1].selectedIndex].value;
-                if (clock12Running) {
-                    console.log('12 is running');
-                    x3 = setInterval(function () { showClock12(selectedZoneC2, 'secondCunt') }, 1000);
-                }
-                if (clock24Running){
-                    console.log("24 is running");
-                    x3 = setInterval(function () { showClock24(selectedZoneC2, 'secondCunt') }, 1000)
-                    
-                }
+        // console.log("12",clock12Running,"24",clock24Running);
+        secondCardRunning = true;
 
-            }
+        console.log("second card is running")
+        clearInterval(x3);//for reseting timezone after object creation
+        selectedZoneC2 = select[1].options[select[1].selectedIndex].value;
+        if (clock12Running) {
+            console.log('12 is running');
+            x3 = setInterval(function () { showClock12(selectedZoneC2, 'secondCunt') }, 1000);
+        }
+        if (clock24Running) {
+            console.log("24 is running");
+            x3 = setInterval(function () { showClock24(selectedZoneC2, 'secondCunt') }, 1000)
+
+        }
+
+
     })
 }
-// select[1].addEventListener("click",function(){
-
-//     }
-// })
-// }
