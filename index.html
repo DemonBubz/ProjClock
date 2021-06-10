@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Clock</title>
-    <link href="index.css" rel="stylesheet">
+    <link href="CSS/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,17 +14,26 @@
         <source src="resources/download.mp3">
     </audio>
     <div class="content">
-    <div class="container">
+    <div class="container" id="firstCunt">
         <!-- script pushes the date here --> 
     </div>
-    <div class=btn id="btn1" >
-        <input type="button" value="Choose a different timezone" onclick="">
+    <div class="btn" id="div1" >
+        <label for="timezone">Choose a different timezone</label>
+        <select id="timezone"></select> <!-- label with not options yet-->
     </div>
-    <div class="btn" id="btn2">
-        <input type="button" value="switch between 24 Hour clock and 12 Hour clock" >
+    <div class="btn" id="div3" >
+        <label for="timezone">Choose a different timezone</label>
+        <select id="timezone"></select> <!-- label with not options yet-->
+    </div>
+    <div class="btn" id="div2">
+        <input type="button" value="switch between 24 Hour clock and 12 Hour clock" id="btn2">
     </div>
     </div>
 </body>
-<script src="index.js"></script>
+<script src="JavaScript/LuxonAPI/luxon.min.js"></script>
+<script src="JavaScript/index.js"></script>
+<script src="JavaScript/card.js"></script>
+<script src="JavaScript/switch.js"></script>
+<script src="JavaScript/main.js"></script>
 
 </html>

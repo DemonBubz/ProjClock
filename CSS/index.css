@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
 
 body {
-
+    overflow:hidden;
     box-sizing: border-box;
     background: linear-gradient(to right, rgb(39, 12, 38), rgb(16, 13, 34));
     font-family: "exo",Arial, Helvetica, sans-serif;
@@ -11,7 +11,7 @@ body {
 .content{
     position: absolute;
     display:inline-block;
-    border:2px solid black;
+    /* border:2px solid black; */
     top: 50%;
     left: 50%;
     width: 60%;
@@ -28,14 +28,19 @@ body {
 }
 .btn{
     
-    /* display: inline-block; */
+    display:inherit;
     margin:2px;
     padding:1px;
 }
-#btn1{
+#div1{
+    /* border:2px solid blue; */
     float:left;
 }
-#btn2{
+#div1 label{
+    font-size: 12px;
+}
+#div2{
+    /* border:2px solid red; */
     float:right;
 }
 .btn input{
