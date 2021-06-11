@@ -19,6 +19,7 @@ document.getElementById("btn2").addEventListener("click",x=>{
      if(clock24Running){
         clearInterval(x1);
         x1=setInterval(function(){showClock12(defaultZone,'zeroCunt')});
+        
          if(firstCardRunning){
         clearInterval(x2);
         x2=setInterval(function(){showClock12(selectedZoneC1,"firstCunt")},1000);
