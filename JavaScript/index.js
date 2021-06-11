@@ -12,7 +12,6 @@ function playSound(min, sec) {
     // console.log(min, sec);
     if (min % 15 == 0 && sec == 0) {
         elem.play();
-        setTimeout(function x() { elem.play(); }, 2000);
     }
 }
 
