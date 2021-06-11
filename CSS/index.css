@@ -48,10 +48,10 @@ body {
     color: rgb(90, 128, 38);
     display: block;
     height: 5vw;
-    width: 45vw;
+    width: 37vw;
     margin: auto;
     border-radius: 4px;
-    font-size:1.74vw;
+    font-size:1.5vw;
     font-weight: bold;
     /* border:#01080a solid 3px; */
     border:none;
@@ -74,10 +74,12 @@ width:21vw;
 border-radius: 5px;
 color:rgb(90, 128, 38);
 background:rgb(8, 21, 24);
-font-size: 2vw;
+font-size: 1.5vw;
 outline:none;}
 
 #div2 details {
-    font-size: 2vw;
+    font-size: 1.75vw;
+    margin:2px;
+    padding:2px;
     margin-left:13vw;
 }
