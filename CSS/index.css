@@ -51,7 +51,8 @@ body {
     width: 45vw;
     margin: auto;
     border-radius: 4px;
-    font-size:2vw;
+    font-size:1.74vw;
+    font-weight: bold;
     /* border:#01080a solid 3px; */
     border:none;
 }
@@ -73,6 +74,7 @@ width:21vw;
 border-radius: 5px;
 color:rgb(90, 128, 38);
 background:rgb(8, 21, 24);
+font-size: 2vw;
 outline:none;}
 
 #div2 details {
